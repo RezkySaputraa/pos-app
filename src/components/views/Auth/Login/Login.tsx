@@ -7,7 +7,34 @@ import Link from "next/link";
 import { Button } from "@heroui/button";
 import { cn } from "@/utils/cn";
 
+import { useState } from "react";
+
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (res.ok && data.token) {
+        localStorage.setItem("token", data.token);
+        // redirect or show success
+      } else {
+        setError(data.message || "Login failed");
+      }
+    } catch (err) {
+      setError("Login error");
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full gap-10 lg:flex-row lg:gap-20">
       <div className="flex flex-col items-center justify-center w-full gap-10 lg:w-1/3">
@@ -37,22 +64,24 @@ const Login = () => {
               Register here
             </Link>
           </p>
-
-          <form className="flex w-80 flex-col gap-2">
+          {error && <div className="text-danger-500 mb-2">{error}</div>}
+          <form className="flex w-80 flex-col gap-2" onSubmit={handleSubmit}>
             <Input
-              type="text"
-              label="Email / Username"
+              type="email"
+              label="Email"
               variant="bordered"
               autoComplete="off"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             ></Input>
-
             <Input
               type={"password"}
               label="Password"
               variant="bordered"
               autoComplete="off"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             ></Input>
-
             <Button color="danger" size="lg" type="submit">
               {"Login"}
             </Button>
