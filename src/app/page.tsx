@@ -1,15 +1,14 @@
-import { Button } from "@heroui/button";
+import Home from "@/components/views/Home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Rezky Saputra Acara",
+  title: "Nara | Home",
+  description: "Nara Home",
 };
 export default function HomePage() {
   return (
     <>
-      <h1 className="text-2xl bg-green-500 text-center">Dashboard</h1>
-      <Button variant="bordered">Test</Button>
+      <Home></Home>
     </>
   );
 }

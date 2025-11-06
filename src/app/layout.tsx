@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { Providers } from "./providers";
 import { cn } from "../utils/cn";
 
 const inter = Inter({
@@ -25,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className)}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={cn(inter.className)}>{children}</body>
     </html>
   );
 }

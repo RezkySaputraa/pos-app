@@ -18,7 +18,9 @@ const toDateStandard = (date: DateValue) => {
   const minute = "minute" in date ? date.minute : 0;
   const second = "second" in date ? date.second : 0;
 
-  const result = `${standardDate(year)}-${standardDate(month)}-${standardDate(day)} ${standardDate(hour)}:${standardDate(minute)}:${standardDate(second)}`;
+  const result = `${standardDate(year)}-${standardDate(month)}-${standardDate(
+    day
+  )} ${standardDate(hour)}:${standardDate(minute)}:${standardDate(second)}`;
 
   return result;
 };
@@ -32,14 +34,14 @@ const convertTime = (isoDate: string) => {
   const dateObject = new Date(isoDate);
   const date = dateObject.toLocaleDateString("id-ID", {
     month: "short",
-    day:"numeric",
+    day: "numeric",
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "Asia/Jakarta",
-  })
+  });
 
   return `${date} WIB`;
-}
+};
 
 export { toDateStandard, toInputDate, convertTime };
