@@ -41,7 +41,7 @@ const Card = () => {
               alt="card"
               className="object-contain"
             ></Image>
-            <p className="font-medium text-center text-white">
+            <p className="font-medium text-center text-primary">
               {item.description}
             </p>
           </div>

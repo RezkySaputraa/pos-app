@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Acara | Login",
-  description: "Rezky Saputra Acara",
+  title: "Nara | Login",
+  description: "Nara Login Page",
 };
 
 const LoginPage = () => {
@@ -13,6 +13,6 @@ const LoginPage = () => {
       <Login></Login>
     </Suspense>
   );
-};
+};  
 
 export default LoginPage;

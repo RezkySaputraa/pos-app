@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoginForm from "@/components/elements/auth/LoginForm";
 
 const Login = () => {
   // const handleSubmit = async (e: React.FormEvent) => {
@@ -24,21 +24,18 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full gap-10 lg:flex-row lg:gap-20">
-      <div className="flex flex-col items-center justify-center w-full gap-10 lg:w-1/3">
-        <Image
-          src={"/images/general/logo.svg"}
-          alt="logo"
-          width={180}
-          height={180}
-        ></Image>
-        <Image
-          src={"/images/illustration/login.svg"}
-          alt="login"
-          className="w-2/3 lg:w-full"
-          width={1024}
-          height={1024}
-        ></Image>
+
+      <div className="flex py-20 items-start justify-center w-xl h-auto gap-10 bg-white rounded-2xl">
+        <div className="flex flex-col items-center justify-center w-full gap-5 ">
+          <h1 className="text-6xl font-bold items-center">Nara</h1>
+          <div className="justify-center">
+            <h3 className="text-3xl font-bold items-center">Masuk Ke Dashboard</h3>
+            <h3 className="text-2xl font-bold items-center">Selamat Datang</h3>
+          </div>
+        <LoginForm></LoginForm>
+        </div>
       </div>
+    
     </div>
   );
 };

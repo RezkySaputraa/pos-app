@@ -1,5 +1,18 @@
-@import "tailwindcss";
-@plugin '../../hero.ts';
-/* Note: You may need to change the path to fit your project structure */
-@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
-@custom-variant dark (&:is(.dark *));
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+@theme {
+  --color-primary-50: #f4f9fc;
+  --color-primary-100: #e6f2f8;
+  --color-primary-200: #cbe6f0;
+  --color-primary-300: #9fd0e3;
+  --color-primary-400: #66add0;
+  --color-primary-500: #0078be;
+  --color-primary-600: #005a8d;
+  --color-primary-700: #004066;
+  --color-primary-800: #00273f;
+  --color-primary-900: #00121f;
+  --color-primary: #005a8d;
+
+}
