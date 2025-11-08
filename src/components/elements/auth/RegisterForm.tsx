@@ -15,14 +15,14 @@ export default function RegisterForm() {
             </div>
             <div className="flex flex-col gap-3 pt-5">
                 <div className="flex items-center justify-between">
-                    <label className="inline-flex items-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" className="h-4 w-4 rounded border-gray-300 accent-primary focus:ring-primary" />
+                    <label className="inline-flex items-center gap-2 text-sm text-white">
+                        <input type="checkbox" className="h-4 w-4 rounded border-white accent-primary focus:ring-primary" />
                         <span>Dengan mendaftar, saya menyatakan telah membaca dan
                             menyetujui <a href="#" className="font-bold hover:underline">Ketentuan Layanan & Kebijakan Privasi</a> NARA.</span>
                     </label>
                 </div>
                 <SubmitButton title="Daftar" />
-                <div className="text-center text-sm">
+                <div className="text-center text-sm text-white">
                     <label> sudah Punya Akun? <a href="/auth/login" className="font-bold hover:underline">Masuk</a></label>
                 </div>
             </div>

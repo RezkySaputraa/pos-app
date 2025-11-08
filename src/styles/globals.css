@@ -16,6 +16,8 @@
   
   /* Custom gradient variable */
   --gradient-primary: 002E62;
+
+  --color-accent : #FFBD59;
 }
 
 @layer utilities {
