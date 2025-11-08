@@ -6,7 +6,7 @@ export default function AuthLayoutPage({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center min-w-full min-h-screen gap-10 bg-primary antialiased lg:py-0">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-10 bg-primary-gradient ">
       <AuthLayout>{children}</AuthLayout>
     </div>
   );

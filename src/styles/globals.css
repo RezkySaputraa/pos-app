@@ -4,15 +4,22 @@
 
 @theme {
   --color-primary-50: #f4f9fc;
-  --color-primary-100: #e6f2f8;
-  --color-primary-200: #cbe6f0;
-  --color-primary-300: #9fd0e3;
-  --color-primary-400: #66add0;
-  --color-primary-500: #0078be;
-  --color-primary-600: #005a8d;
-  --color-primary-700: #004066;
-  --color-primary-800: #00273f;
-  --color-primary-900: #00121f;
-  --color-primary: #005a8d;
+  --color-primary-100: #cbe6f0;
+  --color-primary-200: #9fd0e3;
+  --color-primary-300: #66add0;
+  --color-primary-400: #0078be;
+  --color-primary-500: #0047ab;
+  --color-primary-600: #002f62;
+  --color-primary-700: #00274f;
+  --color-primary-800: #00121f;
+  --color-primary-900: #000a12;
+  
+  /* Custom gradient variable */
+  --gradient-primary: 002E62;
+}
 
+@layer utilities {
+  .bg-primary-gradient {
+    background-image: linear-gradient(to right, #0047AB, #002E62);
+  }
 }

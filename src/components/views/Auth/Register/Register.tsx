@@ -26,18 +26,16 @@ const Register = () => {
   // };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-10 lg:flex-row lg:gap-20">
-      <div className="flex py-20 items-start justify-center w-xl h-auto gap-10 bg-white rounded-2xl">
-        <div className="flex flex-col items-center justify-center w-full gap-5 ">
-          <h1 className="text-6xl font-bold items-center">Nara</h1>
-          <div className="justify-center">
-            <h3 className="text-3xl font-bold items-center">Masuk Ke Dashboard</h3>
-            <h3 className="text-2xl font-bold items-center">Selamat Datang</h3>
+    <div>
+      <div className="flex py-15 justify-center w-full min-w-lg max-w-xl h-auto bg-white rounded-2xl px-15">
+        <div className="flex flex-col justify-center gap-5 w-full">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">Daftar</h3>
+            <h3 className="text-xl font-bold py-1">Buat akun untuk memulai perjalanan datamu.</h3>
           </div>
           <RegisterForm />
         </div>
       </div>
-
     </div>
   );
 };
