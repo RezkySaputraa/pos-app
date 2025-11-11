@@ -24,4 +24,7 @@
   .bg-primary-gradient {
     background-image: linear-gradient(to right, #0047AB, #002E62);
   }
+  .bg-primary-gradient-topdown {
+    background-image: linear-gradient(to bottom, #0047AB, #002E62);
+  }
 }
