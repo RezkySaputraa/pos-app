@@ -3,10 +3,16 @@
 
 import SubmitButton from "./SubmitButton";
 import InputField from "./InputField";
+import { useRouter } from "next/navigation"; 
 
 export default function RegisterForm() {
+    const router = useRouter();
+
+    const handleSubmit = () => {
+        router.push("/admin");              
+    }
     return (
-<form className="flex flex-col gap-4 w-full" action="">
+        <form className="flex flex-col gap-4 w-full" action={handleSubmit}>
             <div className="flex flex-col gap-4">
                 <InputField title="Nama Lengkap" placeholder="Masukkan nama lengkap" />
                 <InputField title="Email" placeholder="Masukkan email" />

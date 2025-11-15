@@ -35,7 +35,7 @@ export async function POST(request: Request) {
         email,
         createdAt: new Date().toISOString(),
       },
-    ]);
+    ]); 
     if (dbError) {
       return new Response(
         JSON.stringify({

@@ -26,12 +26,12 @@ const Register = () => {
   // };
 
   return (
-    <div className="flex flex-row bg-white min-h-screen">
+    <div className="flex flex-row min-h-screen">
       <div className="flex flex-col w-full items-center justify-center p-10 md:p-30 bg-primary-gradient">
         <Image src="/images/general/logo.png" alt="Login Image" width={200} height={200} />
         <RegisterForm />
       </div>
-      <div className="relative hidden md:flex justify-center items-center w-full min-w-1/2 min-h-screen h-screen bg-white">
+      <div className="relative hidden md:flex justify-center items-center w-full min-w-1/2 min-h-screen h-screen bg-bg-primary">
         <Image
           src="/images/illustration/login.png"
           alt="Login Image"

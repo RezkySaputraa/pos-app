@@ -25,11 +25,11 @@ const Login = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col w-full items-center justify-center p-10 md:p-30 bg-primary-gradient min-h-screen">
+      <div className="flex flex-col w-full items-center justify-center p-10 md:p-30 min-h-screen">
         <Image src="/images/general/logo.png" alt="Login Image" width={200} height={200} />
         <LoginForm />
       </div>
-      <div className="relative hidden md:flex justify-center items-center w-full min-w-1/2 max-w-1/2 min-h-screen bg-white">
+      <div className="relative hidden md:flex justify-center items-center w-full min-w-1/2 max-w-1/2 min-h-screen bg-bg-primary">
         <Image
           src="/images/illustration/login.png"
           alt="Login Image"

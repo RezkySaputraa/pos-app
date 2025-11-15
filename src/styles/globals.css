@@ -15,9 +15,11 @@
   --color-primary-900: #000a12;
   
   /* Custom gradient variable */
-  --gradient-primary: 002E62;
+  --color-primary: #0047AB;
 
   --color-accent : #FFBD59;
+
+  --color-bg-primary: #f6f8fb;
 }
 
 @layer utilities {
