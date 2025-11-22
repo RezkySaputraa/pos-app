@@ -10,7 +10,7 @@ export default function SideBar() {
     const pathname = usePathname();
     
     const isActive = (path: string) => pathname === path;
-    const isDashboardActive = pathname.startsWith('/admin/dashboard') || pathname.startsWith('/admin/menu') || pathname.startsWith('/admin/stock');
+    const isDashboardActive = pathname.startsWith('/admin/dashboard') || pathname.startsWith('/admin/dashboard-menu') || pathname.startsWith('/admin/dashboard-stock');
     
     return (
         <div className="w-64 min-h-screen bg-white shadow-lg flex flex-col">
@@ -44,30 +44,20 @@ export default function SideBar() {
                     {isDashboardOpen && (
                         <div className="ml-8 mt-1 flex flex-col gap-1">
                             <Link 
-                                href="/admin/overview" 
+                                href="/admin/dashboard-menu" 
                                 className={`px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
-                                    isActive('/admin/overview') 
-                                        ? 'bg-orange-100 text-orange-600 font-medium' 
-                                        : 'text-gray-600 hover:bg-gray-50'
-                                }`}
-                            >
-                                Dashboard Overview
-                            </Link>
-                            <Link 
-                                href="/admin/menu" 
-                                className={`px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
-                                    isActive('/admin/menu') 
-                                        ? 'bg-orange-100 text-orange-600 font-medium' 
+                                    isActive('/admin/dashboard-menu') 
+                                        ? 'bg-orange-100 text-black font-medium' 
                                         : 'text-gray-600 hover:bg-gray-50'
                                 }`}
                             >
                                 Dashboard Menu
                             </Link>
                             <Link 
-                                href="/admin/stock" 
+                                href="/admin/dashboard-stock" 
                                 className={`px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
-                                    isActive('/admin/stock') 
-                                        ? 'bg-orange-100 text-orange-600 font-medium' 
+                                    isActive('/admin/dashboard-stock') 
+                                        ? 'bg-orange-100 text-black font-medium' 
                                         : 'text-gray-600 hover:bg-gray-50'
                                 }`}
                             >

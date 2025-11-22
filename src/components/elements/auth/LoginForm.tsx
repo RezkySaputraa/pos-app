@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
     const router = useRouter();
-
     const handleSubmit = () => {
         router.push("/admin");
     }
@@ -20,7 +19,7 @@ export default function LoginForm() {
             <div className="flex flex-col gap-3 pt-5">
                 <div className="flex items-center justify-between">
                     <label className="inline-flex items-center gap-2 text-sm text-white">
-                        <input type="checkbox" className="h-4 w-4 rounded border-gray-300 accent-primary" />
+                        <input type="checkbox" className="h-4 w-4 rounded border-gray-300 accent-white" />
                         <span>Remember me</span>
                     </label>
                     <a href="/forgot-password" className="text-sm text-white hover:underline ">

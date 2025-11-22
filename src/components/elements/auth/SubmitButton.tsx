@@ -5,7 +5,7 @@ export default function SubmitButton({ title }: { title: string }) {
     <div>
       <button
         className="p-3 rounded-2xl bg-accent text-white font-bold hover:opacity-85 transition-opacity w-full"
-      >
+>
         {title}
       </button>
     </div>

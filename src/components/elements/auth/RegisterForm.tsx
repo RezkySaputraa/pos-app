@@ -22,7 +22,7 @@ export default function RegisterForm() {
             <div className="flex flex-col gap-3 pt-5">
                 <div className="flex items-center justify-between">
                     <label className="inline-flex items-center gap-2 text-sm text-white">
-                        <input type="checkbox" className="h-4 w-4 rounded border-white accent-primary focus:ring-primary" />
+                        <input type="checkbox" className="h-4 w-4 rounded border-white accent-white focus:ring-primary" />
                         <span>Dengan mendaftar, saya menyatakan telah membaca dan
                             menyetujui <a href="#" className="font-bold hover:underline">Ketentuan Layanan & Kebijakan Privasi</a> NARA.</span>
                     </label>
