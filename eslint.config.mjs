@@ -22,6 +22,8 @@ const eslintConfig = [
     rules: {
       // matiin rule unescaped entities
       "react/no-unescaped-entities": "off",
+      // kalau mau matiin semua TS any check, bisa juga (Next + ESLint TypeScript)
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ];
